@@ -21,10 +21,10 @@ function createMap(photos) {
         var lon = photos[i].Lon;
         var date = photos[i].Date;
 
-        var markerHtml = '<a href='+url+' target="_blank" style="height:100%; width:100%"><img src='+url+'/></a><p>Time of visit:<br>'+ date +'</p>'
+        var markerHtml = '<a href='+url+' target="_blank"><img src='+url+' style="height:175px; width:250px"/></a><p>Date of visit: '+ date +'</p>'
         var marker = L.marker([lat,lon],
             {icon: cameraIcon})
-            .bindPopup(markerHtml,{Height:"50px",Width:"50px"});
+            .bindPopup(markerHtml);
 
         markerClusters.addLayer(marker);
 
